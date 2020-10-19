@@ -330,7 +330,8 @@ function placeFridge (zone: number) {
     inSignFridge.setFlag(SpriteFlag.Invisible, true)
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    game.over(false)
+    isOrderTaken = true
+    haveOrder()
 })
 function ingredientsOut () {
     monkey.say("Need to refill the toppings...", 1000)
